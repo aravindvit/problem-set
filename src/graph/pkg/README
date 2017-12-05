@@ -1,0 +1,15 @@
+The problem is to write a Build System, which accepts the following command
+
+DEPEND <list of pkgs>(example DEPEND SPRING HIBERNATE JETTY)
+ - After adding HIBERNATE as dependent for SPRING (if another command DEPEND HIBERNATE SPRING executed it should fail)
+
+INSTALL <pkgName> (ex INSTALL SPRING)
+
+ - Install pkg and all its corresponding dependencies
+
+REMOVE <pkgName> (ex REMOVE SPRING)
+ - Dont remove if there is parent dependency
+ - remove all the dependencies added for this package
+
+LIST
+ - List all the installed packages
