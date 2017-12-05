@@ -41,6 +41,7 @@ public class LRU<K, T> {
 			return;
 		
 		Node<T> tmp = tail.next;
+		map.remove(tmp);
 		tail.next = tmp.prev;
 		tmp.prev.next = null;
 		
